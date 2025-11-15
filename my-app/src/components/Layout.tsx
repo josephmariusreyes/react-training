@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useNavigate, Outlet, useLocation } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
-import './Layout.css';
+import './Layout.scss';
 
 const Layout: React.FC = () => {
   const { logout } = useAuth();

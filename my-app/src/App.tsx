@@ -9,7 +9,7 @@ import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
 import Customers from './pages/Customers';
 import CustomerDetails from './pages/CustomerDetails';
-import './App.css';
+import './App.scss';
 
 // Create a client
 const queryClient = new QueryClient({

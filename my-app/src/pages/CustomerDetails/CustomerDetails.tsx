@@ -8,7 +8,7 @@ import { PersonalInfoForm } from './components/PersonalInfoForm';
 import { CompanyInfoForm } from './components/CompanyInfoForm';
 import { AddressForm } from './components/AddressForm';
 import { AccountSummary } from './components/AccountSummary';
-import './CustomerDetails.css';
+import './CustomerDetails.scss';
 
 const CustomerDetails: React.FC = () => {
   const { id } = useParams<{ id: string }>();

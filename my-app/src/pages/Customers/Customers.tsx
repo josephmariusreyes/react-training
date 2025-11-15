@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useCustomers } from '../../hooks/useCustomers';
 import { Customer } from '../../types/Customer';
-import './Customers.css';
+import './Customers.scss';
 
 const Customers: React.FC = () => {
   const { data: customers = [], isLoading, error } = useCustomers();

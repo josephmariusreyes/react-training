@@ -1,9 +1,9 @@
 import reactImg from './assets/react-core-concepts.png';
-import { CORE_CONCEPTS } from './data.js';
+import { CORE_CONCEPTS } from './data';
 
 const reactDescriptions = ['Fundamental', 'Crucial', 'Core'];
 
-function genRandomInt(max) {
+function genRandomInt(max: number): number {
   return Math.floor(Math.random() * (max + 1));
 }
 
@@ -22,7 +22,13 @@ function Header() {
   );
 }
 
-function CoreConcept({ image, title, description }) {
+interface CoreConceptProps {
+  image: string;
+  title: string;
+  description: string;
+}
+
+function CoreConcept({ image, title, description }: CoreConceptProps) {
   return (
     <li>
       <img src={image} alt={title} />

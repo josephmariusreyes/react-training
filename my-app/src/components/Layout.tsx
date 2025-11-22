@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useNavigate, Outlet, useLocation } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
+import ThemeToggle from './ThemeToggle';
 import './Layout.scss';
 
 const Layout: React.FC = () => {
@@ -30,6 +31,7 @@ const Layout: React.FC = () => {
       <aside className="sidebar">
         <div className="sidebar-header">
           <h2>CRM System</h2>
+          <ThemeToggle />
         </div>
         
         <nav className="sidebar-nav">

@@ -1,4 +1,6 @@
-export default function GameOver({ winner, onRestart }) {
+import { GameOverProps } from '../interfaces';
+
+export default function GameOver({ winner, onRestart }: GameOverProps): JSX.Element {
   return (
     <div id="game-over">
       <h2>Game Over!</h2>

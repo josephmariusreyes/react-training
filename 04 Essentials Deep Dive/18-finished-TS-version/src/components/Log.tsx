@@ -1,4 +1,6 @@
-export default function Log({ turns }) {
+import { LogProps } from '../interfaces';
+
+export default function Log({ turns }: LogProps): JSX.Element {
   return (
     <ol id="log">
       {turns.map((turn) => (

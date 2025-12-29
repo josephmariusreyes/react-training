@@ -1,15 +1,16 @@
-import { useState } from 'react';
+import { useState, ChangeEvent } from 'react';
+import { PlayerProps } from '../interfaces';
 
 export default function Player({
   initialName,
   symbol,
   isActive,
   onChangeName,
-}) {
-  const [playerName, setPlayerName] = useState(initialName);
-  const [isEditing, setIsEditing] = useState(false);
+}: PlayerProps): JSX.Element {
+  const [playerName, setPlayerName] = useState<string>(initialName);
+  const [isEditing, setIsEditing] = useState<boolean>(false);
 
-  function handleEditClick() {
+  function handleEditClick(): void {
     setIsEditing((editing) => !editing);
 
     if (isEditing) {
@@ -17,18 +18,16 @@ export default function Player({
     }
   }
 
-  function handleChange(event) {
+  function handleChange(event: ChangeEvent<HTMLInputElement>): void {
     setPlayerName(event.target.value);
   }
 
   let editablePlayerName = <span className="player-name">{playerName}</span>;
-  // let btnCaption = 'Edit';
 
   if (isEditing) {
     editablePlayerName = (
       <input type="text" required value={playerName} onChange={handleChange} />
     );
-    // btnCaption = 'Save';
   }
 
   return (
